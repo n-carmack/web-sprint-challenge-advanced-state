@@ -4,13 +4,14 @@ import { combineReducers } from 'redux';
 import {MOVE_CLOCKWISE, MOVE_COUNTERCLOCKWISE, SET_SELECTED_ANSWER, SET_INFO_MESSAGE, SET_QUIZ_INTO_STATE, INPUT_CHANGE, RESET_FORM} from './action-types'
 
 const initialWheelState = 0
+
 function wheel(state = initialWheelState, action) {
   switch(action.type) {
     case MOVE_CLOCKWISE:
-
+      return state === 5 ? 0: state += 1
 
     case MOVE_COUNTERCLOCKWISE:
-
+      return state === 0 ? 5: state -= 1
 
     default:
       return state
@@ -63,7 +64,7 @@ function form(state = initialFormState, action) {
 
 
     case RESET_FORM:
-      
+
 
     default:
       return state
