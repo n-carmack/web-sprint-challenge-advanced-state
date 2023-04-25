@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default function Quiz(props) {
+import { connect } from 'react-redux';
+
+
+function Quiz(props) {
   return (
     <div id="wrapper">
       {
@@ -32,3 +35,11 @@ export default function Quiz(props) {
     </div>
   )
 }
+
+const mapStateToProps = (state) => {
+  return{
+//quiz and answer
+  }
+}
+
+export default connect(mapStateToProps, {})()
