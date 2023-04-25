@@ -7,7 +7,6 @@ import { moveClockwise, moveCounterClockwise } from '../state/action-creators';
 function Wheel(props) {
 
   const handleClockwiseClick = () => {
-    console.log(props.wheel);
     props.moveClockwise()
   }
 
