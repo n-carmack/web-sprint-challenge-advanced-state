@@ -12,7 +12,7 @@ function Quiz(props) {
   }, []);
 
   const handleQuizSubmit = (e) => {
-    e.preventdefault()
+    e.preventDefault()
     props.postAnswer({ "quiz_id": props.quiz.quiz_id, "answer_id": props.selectedAnswer.answer_id})
   }
 
