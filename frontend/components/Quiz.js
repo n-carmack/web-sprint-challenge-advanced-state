@@ -28,14 +28,14 @@ function Quiz(props) {
               <div className={`answer ${props.selectedAnswer === props.quiz.answers[0] ? 'selected':''}`}>
                 {props.quiz.answers[0].text}
                 <button onClick={()=>{props.selectAnswer(props.quiz.answers[0])}}>
-                  {props.selectedAnswer===props.quiz.answers[0] ? 'Selected' : 'Select'}
+                  {props.selectedAnswer===props.quiz.answers[0] ? 'SELECTED' : 'Select'}
                 </button>
               </div>
 
               <div className={`answer ${props.selectedAnswer===props.quiz.answers[1] ? 'selected':''}`}>
                 {props.quiz.answers[1].text}
                 <button onClick={()=>{props.selectAnswer(props.quiz.answers[1])}}>
-                {props.selectedAnswer===props.quiz.answers[1] ? 'Selected' : 'Select'}
+                {props.selectedAnswer===props.quiz.answers[1] ? 'SELECTED' : 'Select'}
                 </button>
               </div>
             </div>
